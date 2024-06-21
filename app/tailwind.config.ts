@@ -7,7 +7,15 @@ const config: Config = {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage:{
+        "windows-desktop": "url('/src/public/windowsScreen.png')"
+      },
+      cursor: {
+        "cute-cursor": "url('/src/public/nso_cursor.cur'), pointer",
+        "cute-pointer": "url('/src/public/nso_point.cur'), pointer"
+      }
+    },
   },
   plugins: [],
 };
