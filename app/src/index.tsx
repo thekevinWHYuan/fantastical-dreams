@@ -3,7 +3,7 @@ import './index.css';
 import { render } from 'solid-js/web';
 import { Route, Router } from '@solidjs/router';
 import Landing from './pages/Landing';
-
+import { WindowsContextProvider } from './context/WindowsContext';
 const root = document.getElementById('root');
 
 if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
@@ -13,7 +13,9 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
 }
 
 render(() => (
-<Router root={Landing}>
-  
-</Router>
+<WindowsContextProvider>
+  <Router root={Landing}>
+      <Route path="/" component={Landing}></Route>
+  </Router>
+</WindowsContextProvider>
 ), root!);
