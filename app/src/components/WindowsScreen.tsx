@@ -20,10 +20,11 @@ const WindowsScreen: Component = () => {
         
         <audio src="../../media/mouse_click.mp3" ref={audioElement}></audio>
 
+        <AppScreen name={store.windowApp}/>
+
         <div class="h-[94%] w-full grid grid-cols-8 grid-rows-8 bg-windows-desktop grid-flow-col p-10">
             <WindowApp source="src/public/images/resume_app.png" name="Resume"/>
             <WindowApp source="" name="About Me"></WindowApp>
-            <AppScreen name={store.windowApp}></AppScreen>
         </div>
 
         <nav class="w-full h-[6%] flex flex-row items-center pl-2 pr-2 bg-[#f6e0f7]">    
