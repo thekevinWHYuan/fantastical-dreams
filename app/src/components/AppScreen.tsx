@@ -12,7 +12,7 @@ function AppScreen(props){
 
     return(
         <Show when={store.windowApp != ""}>
-            <div class="aspect-square absolute h-full border-2 border-purple-500 p-2 animate-app-open origin-top-left bg-gray-100">
+            <div class="aspect-square h-[85%] absolute border-2 border-purple-500 p-2 animate-app-open origin-top-left bg-gray-100 inset-0 m-auto">
                 <nav class="w-full h-[5%] flex justify-end items-center bg-gradient-to-r from-gray-300 via-gray-300 to-gray-100">
                     <button class="aspect-square hover:cursor-cute-pointer h-2/3 shadow-lgz border-2 text-2xl border-t-white border-l-white border-b-gray-300 border-r-gray-300 m-px flex items-center justify-center" onClick={closeWindow}>X</button>
                 </nav>  
