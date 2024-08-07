@@ -16,15 +16,16 @@ const WindowsScreen: Component = () => {
         audioElement.play();
     }
 
-    return (<div class="h-full aspect-square flex-column hover:cursor-cute-cursor" onClick={playClickAudio}>
+    return (<div class={`h-full aspect-square flex-column hover:cursor-cute-cursor ${store.flicker ? "animate-flicker" : ""}`} onClick={playClickAudio}>
         
-        <audio src="../../media/mouse_click.mp3" ref={audioElement}></audio>
+        <audio src="../../media/mouse_click.mp3" ref={audioElement}/>
 
         <AppScreen name={store.windowApp}/>
 
         <div class="h-[94%] w-full grid grid-cols-8 grid-rows-8 bg-windows-desktop grid-flow-col p-10">
             <WindowApp source="src/public/images/resume_app.png" name="Resume"/>
-            <WindowApp source="" name="About Me"></WindowApp>
+            <WindowApp source="src/public/images/about_me_logo.png" name="About Me"></WindowApp>
+            <WindowApp source="" name="2hu"></WindowApp>
         </div>
 
         <nav class="w-full h-[6%] flex flex-row items-center pl-2 pr-2 bg-[#f6e0f7]">    
@@ -34,7 +35,9 @@ const WindowsScreen: Component = () => {
             </button>
             <TaskbarDivider/>
             <TaskbarDivider/>
-            <DayStats/>
+            <div class="flex-grow flex justify-end">
+                <DayStats/>
+            </div>
         </nav>
     </div>);
 }   
