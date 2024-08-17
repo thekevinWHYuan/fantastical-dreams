@@ -16,7 +16,7 @@ const WindowsScreen: Component = () => {
         audioElement.play();
     }
 
-    return (<div class={`h-full aspect-square flex-column hover:cursor-cute-cursor ${store.flicker ? "animate-flicker" : ""}`} onClick={playClickAudio}>
+    return (<div class={`min-h-[100svh] aspect-square hover:cursor-cute-cursor ${store.flicker ? "animate-flicker" : ""}`} onClick={playClickAudio}>
         
         <audio src="../../media/mouse_click.mp3" ref={audioElement}/>
 
