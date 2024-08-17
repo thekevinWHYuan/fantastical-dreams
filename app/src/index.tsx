@@ -4,6 +4,7 @@ import { render } from 'solid-js/web';
 import { Route, Router } from '@solidjs/router';
 import Landing from './pages/Landing';
 import { WindowsContextProvider } from './context/WindowsContext';
+import { NotFound } from './pages/NotFound';
 const root = document.getElementById('root');
 
 if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
@@ -14,8 +15,9 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
 
 render(() => (
 <WindowsContextProvider>
-  <Router root={Landing}>
+  <Router>
       <Route path="/" component={Landing}></Route>
+      <Route path="*404" component={NotFound}></Route>
   </Router>
 </WindowsContextProvider>
 ), root!);
