@@ -15,9 +15,9 @@ function WindowApp(props: IWindowApp){
     }
 
     return (
-    <div class="w-full h-full flex flex-col justify-center items-center hover:bg-gray-200 hover:bg-opacity-30" onClick={openWindow}>
+    <div class="aspect-square flex flex-col justify-center items-center hover:bg-gray-200 hover:bg-opacity-30" onClick={openWindow}>
         <img src={props.source}/>
-        <p>{props.name}</p>
+        <span class="text-[100%]">{props.name}</span>
     </div>
 );
 }
