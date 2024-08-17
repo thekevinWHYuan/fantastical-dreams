@@ -8,6 +8,12 @@ const config: Config = {
   darkMode: 'class',
   theme: {
     extend: {
+      colors:{
+        "palette-purple": "#7554ae",
+        "palette-pink": "#f3c6f2",
+        "palette-light-purple": "#ad88c6",
+        "palette-blue": "#caedff"
+      },
       backgroundImage:{
         "windows-desktop": "url('/src/public/windowsScreen.png')",
         "mini-scanline": "repeating-linear-gradient(to bottom, gray 0px, gray 2px, white 2px, white 4px)"
@@ -54,9 +60,6 @@ const config: Config = {
         "flicker": "flicker infinite 0.15s",
         "scanline": "scanline 2s linear infinite",
       },
-      colors: {
-        "transparency": "rgba(76, 175, 80, 0.3)"
-      }
     },
   },
   plugins: [],
