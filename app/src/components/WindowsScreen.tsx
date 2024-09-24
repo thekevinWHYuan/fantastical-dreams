@@ -11,9 +11,16 @@ const WindowsScreen: Component = () => {
     let audioElement: HTMLAudioElement;
 
     const { store } = useWindowsContext();
+    
 
     function playClickAudio(){
         audioElement.play();
+    }
+
+    function mapTaskBar(items: string[]){
+        return items.map((names) => {
+            return (<div class="flex w-1/6 border-[3px] border-b-palette-light-purple border-r-palette-light-purple border-t-pink-100 border-l-pink-100 items-center h-4/5 justify-center">{names}</div>)
+        })
     }
 
     return (<div class={`min-h-[100svh] aspect-square hover:cursor-cute-cursor ${store.flicker ? "animate-flicker" : ""}`} onClick={playClickAudio}>
@@ -29,13 +36,22 @@ const WindowsScreen: Component = () => {
         </div>
 
         <nav class="w-full h-[6%] flex flex-row items-center pl-2 pr-2 bg-[#f6e0f7]">    
-            <button class="w-[15%] shadow-md h-3/5 hover:cursor-cute-pointer flex shadow-purple-100 border-solid border-purple-400 border-[3px] border-t-pink-100 border-l-pink-100 text-2xl">
+            <button class="w-[15%] shadow-md h-4/5 hover:cursor-cute-pointer flex shadow-purple-100 border-solid border-purple-400 border-[3px] border-t-pink-100 border-l-pink-100 text-2xl">
                 <img src="src/public/images/custom_windows_logo.png" class="h-full object-contain aspect-square"/>
-                <p class="object-fill w-full h-full flex items-center justify-center">Start</p>
+                <span class="object-fill w-full h-full flex items-center justify-center">Start</span>
             </button>
             <TaskbarDivider/>
+            <a target="_blank" href="https://github.com/thekevinWHYuan" class="aspect-square h-[32px] ml-2 mr-2 hover:cursor-cute-pointer">
+                <img src="/src/public/images/github_logo.png" alt="My Github"/>
+            </a>
+            <a target="_blank" href="https://www.instagram.com/thekevinwhyuan" class="aspect-square h-[32px] ml-2 mr-2 hover:cursor-cute-pointer">
+                <img src="/src/public/images/instagram_logo.png" alt="My Instagram"/>
+            </a>
             <TaskbarDivider/>
-            <div class="flex-grow flex justify-end">
+            <div class="flex flex-grow h-full items-center pl-2">
+                {mapTaskBar(store.taskbar)}
+            </div>
+            <div class="flex justify-end items-center h-full w-1/6">
                 <DayStats/>
             </div>
         </nav>
