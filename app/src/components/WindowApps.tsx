@@ -1,5 +1,4 @@
 import { useWindowsContext } from "../context/WindowsContext";
-import AppScreen from "./AppScreen"
 
 interface IWindowApp{
     source: string
@@ -11,6 +10,8 @@ function WindowApp(props: IWindowApp){
     const { setStore } = useWindowsContext();
 
     function openWindow(){
+        setStore("taskbar", (apps) => [...apps, props.name])
+        setStore("searchHistory", (searches) => [...searches, props.name])
         setStore("windowApp", props.name)
     }
 
