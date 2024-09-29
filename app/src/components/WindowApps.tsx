@@ -7,7 +7,7 @@ interface IWindowApp{
 
 function WindowApp(props: IWindowApp){
 
-    const { setStore } = useWindowsContext();
+    const { store, setStore } = useWindowsContext();
 
     function openWindow(){
         setStore("taskbar", (apps) => [...apps, props.name])
@@ -16,7 +16,7 @@ function WindowApp(props: IWindowApp){
     }
 
     return (
-    <div class="aspect-square flex flex-col justify-center items-center hover:bg-gray-200 hover:bg-opacity-30" onClick={openWindow}>
+    <div class={`aspect-square flex flex-col justify-center items-center hover:bg-gray-200 hover:bg-opacity-30 ${store.taskbar.length == 0 ? "" : "pointer-events-none"}`} onClick={openWindow}>
         <img src={props.source}/>
         <span class="text-[100%]">{props.name}</span>
     </div>
