@@ -36,10 +36,10 @@ export default function Me(props: IAboutMe){
                     Related Items
                 </h2>
                 <ul class="flex-grow flex flex-col justify-around items-center">
-                    <li class="border-2 w-full h-[15%] flex justify-center items-center border-palette-purple border-t-gray-50 border-l-gray-50"><a onClick={() =>anotherPage("About Me")} class={`hover:cursor-cute-pointer ${store.windowApp == "About Me" ? "text-palette-purple" : ""} text-[1.5vh]`}>About Me</a></li>
-                    <li class="border-2 w-full h-[15%] flex justify-center items-center border-palette-purple border-t-gray-50 border-l-gray-50"><a onClick={() =>anotherPage("Resume")} class={`hover:cursor-cute-pointer ${store.windowApp == "Resume" ? "text-palette-purple" : ""} text-[1.5vh]`}>Resume</a></li>
-                    <li class="border-2 w-full h-[15%] flex justify-center items-center border-palette-purple border-t-gray-50 border-l-gray-50"><a onClick={() =>anotherPage("Projects")} class={`hover:cursor-cute-pointer ${store.windowApp == "Projects" ? "text-palette-purple" : ""} text-[1.5vh]`}>Projects</a></li>
-                    <li class="border-2 w-full h-[15%] flex justify-center items-center border-palette-purple border-t-gray-50 border-l-gray-50"><a onClick={() =>anotherPage("Endorsements")} class={`hover:cursor-cute-pointer ${store.windowApp == "Endorsements" ? "text-palette-purple" : ""} text-[1.5vh]`}>Endorsements</a></li>
+                    <li class="border-2 w-full h-[15%] flex justify-center items-center border-palette-purple border-t-gray-50 border-l-gray-50 hover:cursor-cute-pointer" onClick={() =>anotherPage("About Me")}><a class={`${store.windowApp == "About Me" ? "text-palette-purple" : ""} text-[1.5vh]`}>About Me</a></li>
+                    <li class="border-2 w-full h-[15%] flex justify-center items-center border-palette-purple border-t-gray-50 border-l-gray-50 hover:cursor-cute-pointer" onClick={() =>anotherPage("Resume")}><a class={`${store.windowApp == "Resume" ? "text-palette-purple" : ""} text-[1.5vh]`}>Resume</a></li>
+                    <li class="border-2 w-full h-[15%] flex justify-center items-center border-palette-purple border-t-gray-50 border-l-gray-50 hover:cursor-cute-pointer" onClick={() =>anotherPage("Projects")}><a  class={`${store.windowApp == "Projects" ? "text-palette-purple" : ""} text-[1.5vh]`}>Projects</a></li>
+                    <li class="border-2 w-full h-[15%] flex justify-center items-center border-palette-purple border-t-gray-50 border-l-gray-50 hover:cursor-cute-pointer" onClick={() =>anotherPage("Endorsements")}><a class={`${store.windowApp == "Endorsements" ? "text-palette-purple" : ""} text-[1.5vh]`}>Endorsements</a></li>
                 </ul>
             </nav>
         </aside>
