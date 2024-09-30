@@ -36,7 +36,7 @@ function AppScreen(props){
                         <span>{`https://${store.windowApp.replace(" ", "")}.com`}</span>
                     </div>
                 </div>
-                <section class="border-gray-200 border-r-gray-50 border-b-gray-50 border-4 border-solid w-full flex-grow">
+                <section class="border-gray-200 border-r-gray-50 border-b-gray-50 border-4 border-solid w-full flex-grow h-[89%]">
                     <Me banner="bg-[url('src/public/images/about_me_banner.png')]" title={store.windowApp} mode={store.windowApp}/>
                 </section>
             </div>

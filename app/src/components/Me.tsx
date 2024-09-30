@@ -43,7 +43,7 @@ export default function Me(props: IAboutMe){
                 </ul>
             </nav>
         </aside>
-        <section class="col-span-8 row-span-8 flex flex-col pl-2 pt-2">
+        <section class="col-span-8 row-span-8 flex flex-col pl-2 pt-2 h-full">
             <Show when={props.mode == "About Me"}>
                 <Post content="Kevin's a 3rd Year at Cal Poly studying Software Engineering and minoring in the Computing for the Interactive Arts program"/>
                 <Post content="Be sure to check out his other shenanigans and projects! Interests Include: OS, VR Development including 3D Modeling, Web Development"/>
