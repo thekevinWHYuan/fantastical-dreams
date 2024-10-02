@@ -42,7 +42,7 @@ const WindowsScreen: Component = () => {
             </div>
             <div class="w-full h-[70%] flex">
                 <div class="h-full w-2/5 flex items-center justify-end pr-2">
-                    <img src="src/public/images/shutdown_monitor.png"></img>
+                    <img src="/src/public/images/shutdown_monitor.png"></img>
                 </div>
                 <ul class="h-full w-3/5 flex  flex-col justify-center">
                     What do you want it to do?

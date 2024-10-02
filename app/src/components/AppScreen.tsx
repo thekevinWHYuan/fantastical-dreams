@@ -30,8 +30,8 @@ function AppScreen(props){
                     <button class="aspect-square hover:cursor-pointer h-2/3 shadow-lgz border-2 text-2xl border-t-white border-l-white border-b-gray-300 border-r-gray-300 m-px flex items-center justify-center" onClick={closeWindow}>X</button>
                 </nav>
                 <div class="h-[7%] flex w-full border-t-2 border-b-2 border-t-gray-300 items-center">
-                    <img src="src/public/images/left_web_button.png" class={`h-1/2 m-1 ${store.currentPage <= 0 ? 'grayscale pointer-events-none' : "cursor-pointer"}`} onClick={() => traverseHistory(-1)}/>
-                    <img src="src/public/images/right_web_button.png" class={`h-1/2 m-1 ${store.currentPage == store.searchHistory.length - 1 ? 'grayscale pointer-events-none' : "cursor-pointer"}`} onClick={() => traverseHistory(1)}/>
+                    <img src="/src/public/images/left_web_button.png" class={`h-1/2 m-1 ${store.currentPage <= 0 ? 'grayscale pointer-events-none' : "cursor-pointer"}`} onClick={() => traverseHistory(-1)}/>
+                    <img src="/src/public/images/right_web_button.png" class={`h-1/2 m-1 ${store.currentPage == store.searchHistory.length - 1 ? 'grayscale pointer-events-none' : "cursor-pointer"}`} onClick={() => traverseHistory(1)}/>
                     <div class="flex-grow h-1/2 bg-white border-2 border-b-gray-50 border-t-gray-300 border-l-gray-300 border-r-gray-50">
                         <span class="ml-1 h-full flex items-center">{`https://${store.windowApp.replace(" ", "")}.com`}</span>
                     </div>
