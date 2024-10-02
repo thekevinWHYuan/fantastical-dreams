@@ -30,19 +30,19 @@ const WindowsScreen: Component = () => {
 
     function mapTaskBar(items: string[]){
         return items.map((names) => {
-            return (<div class="flex w-1/6 border-[3px] border-b-palette-light-purple border-r-palette-light-purple border-t-pink-100 border-l-pink-100 items-center h-4/5 justify-center text-center">{names}</div>)
+            return (<div class="flex w-1/6 border-[3px] border-b-palette-light-purple border-r-palette-light-purple border-t-pink-100 border-l-pink-100 items-center h-4/5 justify-center text-center text-[0.8vw]">{names}</div>)
         })
     }
 
     return (<div class={`min-h-[100svh] aspect-square hover:cursor-cute-cursor ${store.flicker ? "animate-flicker" : ""}`} onClick={playClickAudio}>
 
-        <dialog ref={dialogElement} class="w-1/4 h-1/4 bg-gray-200 open:flex open:flex-col border-palette-light-purple border-2 z-0">
+        <dialog ref={dialogElement} class="w-1/4 h-1/5 bg-gray-200 open:flex open:flex-col border-palette-light-purple border-2 z-0">
             <div class="w-full h-[10%] border-b-palette-pink pl-2 pr-2 bg-gradient-to-r from-palette-blue to-palette-pink flex flex-col justify-center">
                 <button onclick={closeDialog} class="self-end hover:cursor-cute-pointer">X</button>
             </div>
             <div class="w-full h-[70%] flex">
-                <div class="h-full w-2/5">
-                    <img></img>
+                <div class="h-full w-2/5 flex items-center justify-end pr-2">
+                    <img src="src/public/images/shutdown_monitor.png"></img>
                 </div>
                 <ul class="h-full w-3/5 flex  flex-col justify-center">
                     What do you want it to do?
@@ -71,12 +71,12 @@ const WindowsScreen: Component = () => {
         <AppScreen name={store.windowApp}/>
 
 
-        <div class="h-[94%] w-full grid grid-cols-8 grid-rows-8 bg-windows-desktop grid-flow-col p-10">
+        <div class="h-[94%] w-full grid grid-cols-8 grid-rows-8 bg-[#f9e3ff] grid-flow-col p-10">
             <WindowApp source="src/public/images/resume_app.png" name="Resume"/>
             <WindowApp source="src/public/images/about_me_logo.png" name="About Me"></WindowApp>
         </div>
 
-        <nav class="w-full h-[6%] flex flex-row items-center pl-2 pr-2 bg-[#f6e0f7]">    
+        <nav class="w-full h-[6%] flex flex-row items-center pl-2 pr-2 bg-pink-100">    
             <button class="w-[15%] shadow-md h-4/5 hover:cursor-cute-pointer flex shadow-purple-100 border-solid border-purple-400 border-[3px] border-t-pink-100 border-l-pink-100 text-2xl" onclick={openDialog}>
                 <img src="src/public/images/custom_windows_logo.png" class="h-full object-contain aspect-square"/>
                 <span class="object-fill w-full h-full flex items-center justify-center">Start</span>
