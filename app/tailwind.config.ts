@@ -18,10 +18,6 @@ const config: Config = {
         "clouds": "url('src/public/images/clouds_better.png')",
         "mini-scanline": "repeating-linear-gradient(to bottom, gray 0px, gray 2px, white 2px, white 4px)"
       },
-      cursor: {
-        "cute-cursor": "url('/src/public/nso_cursor.cur'), pointer",
-        "cute-pointer": "url('/src/public/nso_point.cur'), pointer"
-      },
       keyframes: {
         "app-open": {
             "0%": {transform: "scale(0.1)"},
