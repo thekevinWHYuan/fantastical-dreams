@@ -50,11 +50,16 @@ const config: Config = {
           '0%': {transform: "translateY(calc(-50dvh))"},
           '100%': {transform: "translateY(calc(99vh))"},
         },
+        "marquee": {
+          '0%': {transform: "translateX(100%)"},
+          '100%': {transform: "translateX(-100%)"}
+        },
       },
       animation: {  
         "app-open": "app-open 0.1s ease-in-out",
         "flicker": "flicker infinite 0.15s",
         "scanline": "scanline 2s linear infinite",
+        "marquee": "marquee 15s linear infinite"
       },
     },
   },

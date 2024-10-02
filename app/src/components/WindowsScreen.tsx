@@ -30,7 +30,7 @@ const WindowsScreen: Component = () => {
 
     function mapTaskBar(items: string[]){
         return items.map((names) => {
-            return (<div class="flex w-1/6 border-[3px] border-b-palette-light-purple border-r-palette-light-purple border-t-pink-100 border-l-pink-100 items-center h-4/5 justify-center text-center text-[0.8vw]">{names}</div>)
+            return (<div class="flex w-1/6 border-[3px] border-b-palette-light-purple border-r-palette-light-purple border-t-pink-100 border-l-pink-100 items-center h-4/5 justify-center text-center text-[1.5vh]">{names}</div>)
         })
     }
 
@@ -70,16 +70,22 @@ const WindowsScreen: Component = () => {
 
         <AppScreen name={store.windowApp}/>
 
+        <section class="w-full h-[5%] flex flex-row items-center  bg-[#f8ebff]">    
+            <section class="h-full w-full overflow-hidden">
+                <span class="h-full w-full flex items-center text-[100%] whitespace-nowrap animate-marquee">Welcome to my website! Just 5 easy payments of 99.99 if you want to have a mention here!</span>
+            </section>
+        </section>
 
-        <div class="h-[94%] w-full grid grid-cols-8 grid-rows-8 bg-[#f9e3ff] grid-flow-col p-10">
+
+        <div class="h-[89%] w-full grid grid-cols-8 grid-rows-8 bg-[#f9e3ff] grid-flow-col p-10">
             <WindowApp source="src/public/images/resume_app.png" name="Resume"/>
             <WindowApp source="src/public/images/about_me_logo.png" name="About Me"></WindowApp>
         </div>
 
-        <nav class="w-full h-[6%] flex flex-row items-center pl-2 pr-2 bg-pink-100">    
+        <nav class="w-full h-[6%] flex flex-row items-center pl-2 pr-2 bg-[#f8ebff]">    
             <button class="w-[15%] shadow-md h-4/5 hover:cursor-pointer flex shadow-purple-100 border-solid border-purple-400 border-[3px] border-t-pink-100 border-l-pink-100 text-2xl" onclick={openDialog}>
                 <img src="src/public/images/custom_windows_logo.png" class="h-full object-contain aspect-square"/>
-                <span class="object-fill w-full h-full flex items-center justify-center">Start</span>
+                <span class="object-fill w-full h-full flex items-center justify-center text-[2vh]">Start</span>
             </button>
             <TaskbarDivider/>
             <a target="_blank" href="https://github.com/thekevinWHYuan" class="aspect-square h-[32px] ml-2 mr-2 hover:cursor-pointer">
