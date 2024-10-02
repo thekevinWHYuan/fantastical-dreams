@@ -15,7 +15,7 @@ const config: Config = {
         "palette-blue": "#caedff"
       },
       backgroundImage:{
-        "windows-desktop": "url('/src/public/windowsScreen.png')",
+        "clouds": "url('src/public/images/clouds_better.png')",
         "mini-scanline": "repeating-linear-gradient(to bottom, gray 0px, gray 2px, white 2px, white 4px)"
       },
       cursor: {
