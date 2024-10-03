@@ -56,7 +56,7 @@ export default function Me(props: IAboutMe){
                 <ProjectSection/>
             </Show>
             <Show when={props.mode == "Resume"}>
-                <object data="/src/assets/My_Resume.pdf" class="w-full h-full">
+                <object data="/assets/My_Resume.pdf" class="w-full h-full">
                     <p>It appears that the resume didn't load correctly D:</p>
                 </object>
             </Show>
