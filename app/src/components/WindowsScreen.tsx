@@ -42,7 +42,7 @@ const WindowsScreen: Component = () => {
             </div>
             <div class="w-full h-[70%] flex">
                 <div class="h-full w-2/5 flex items-center justify-end pr-2">
-                    <img src="/src/public/images/shutdown_monitor.png"></img>
+                    <img src="/images/shutdown_monitor.png"></img>
                 </div>
                 <ul class="h-full w-3/5 flex  flex-col justify-center">
                     What do you want it to do?
@@ -78,21 +78,21 @@ const WindowsScreen: Component = () => {
 
 
         <div class="h-[89%] w-full grid grid-cols-8 grid-rows-8 bg-[#f9e3ff] grid-flow-col p-10">
-            <WindowApp source="src/public/images/resume_app.png" name="Resume"/>
-            <WindowApp source="src/public/images/about_me_logo.png" name="About Me"></WindowApp>
+            <WindowApp source="/images/resume_app.png" name="Resume"/>
+            <WindowApp source="/images/about_me_logo.png" name="About Me"></WindowApp>
         </div>
 
         <nav class="w-full h-[6%] flex flex-row items-center pl-2 pr-2 bg-[#f8ebff]">    
             <button class="w-[15%] shadow-md h-4/5 hover:cursor-pointer flex shadow-purple-100 border-solid border-purple-400 border-[3px] border-t-pink-100 border-l-pink-100 text-2xl" onclick={openDialog}>
-                <img src="src/public/images/custom_windows_logo.png" class="h-full object-contain aspect-square"/>
+                <img src="/images/custom_windows_logo.png" class="h-full object-contain aspect-square"/>
                 <span class="object-fill w-full h-full flex items-center justify-center text-[2vh]">Start</span>
             </button>
             <TaskbarDivider/>
             <a target="_blank" href="https://github.com/thekevinWHYuan" class="aspect-square h-[32px] ml-2 mr-2 hover:cursor-pointer">
-                <img src="/src/public/images/github_logo.png" alt="My Github"/>
+                <img src="/images/github_logo.png" alt="My Github"/>
             </a>
             <a target="_blank" href="https://www.instagram.com/thekevinwhyuan" class="aspect-square h-[32px] ml-2 mr-2 hover:cursor-pointer">
-                <img src="/src/public/images/instagram_logo.png" alt="My Instagram"/>
+                <img src="/images/instagram_logo.png" alt="My Instagram"/>
             </a>
             <TaskbarDivider/>
             <div class="flex flex-grow h-full items-center pl-2">
