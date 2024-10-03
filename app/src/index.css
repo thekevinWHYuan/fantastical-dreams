@@ -5,7 +5,7 @@
 @layer base{
     @font-face {
         font-family: "Silkscreen";
-        src: url(public/fonts/Silkscreen/slkscr.ttf);
+        src: url(/fonts/Silkscreen/slkscr.ttf);
     }
     html{
         font-family: "Silkscreen";
